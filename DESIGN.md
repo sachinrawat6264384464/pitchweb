@@ -1,84 +1,44 @@
-# DESIGN SPECIFICATION: PitchWeb Marketing Analytics & UTM Tracking
+# Mayra Ethnic For Men — Visual & UX Design Specification
 
-## 1. Design Vision & Positioning
-PitchWeb is an enterprise-grade UTM link management, multi-touch attribution, and marketing telemetry platform. It bridges the gap between chaotic marketing campaign links and definitive revenue attribution.
+## 1. Brand Vision & Positioning
+Mayra Ethnic For Men is a premium men's designer ethnic wear store situated in Mahalaxmi Nagar, Indore.
+- **Brand Tagline**: *"Where Royalty Meets Affordability 👑"*
+- **Target Audience**: Grooms, brothers of the bride/groom, families attending wedding ceremonies (Haldi, Mehendi, Sangeet, Reception), festival shoppers (Diwali, Eid, Raksha Bandhan), and men seeking tailored ethnic statements.
+- **Visual Identity**: Regal Rajputana and Mughal court aesthetics fused with sleek, contemporary dark-mode luxury.
 
-The aesthetic direction is **"Precision Telemetry"**: high-contrast, obsidian dark-mode interface inspired by Linear, Datadog, and Stripe Sigma, with refined emerald, indigo, and cyan accents.
+## 2. Color Palette & Tokens
+- **Royal Saffron & Amber Gold (Primary)**:
+  - Gold Accent: `#eab308` (amber-500)
+  - Rich Saffron: `#f59e0b` (amber-400)
+  - Deep Bronze/Copper: `#ea580c` (orange-600)
+  - Gradient: `linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%)`
+- **Deep Imperial Charcoal & Obsidian (Backgrounds & Surfaces)**:
+  - Base Body: `#0c0a09` (stone-950)
+  - Surface Card: `#14110e`
+  - Elevated Card: `#1a1510`
+  - Subtle Border: `#2e261f` / `rgba(245, 158, 11, 0.2)`
+- **Emerald Green (Conversion Accent)**:
+  - WhatsApp Direct Chat: `#059669` / `#10b981`
+- **Text & Contrast**:
+  - Primary Headlines: `#ffffff`
+  - Body Text: `#d6d3d1` (stone-300)
+  - Muted Meta: `#a8a29e` (stone-400)
 
----
+## 3. Typography
+- **Headings & Brand Title**: Classic Serif (`font-serif`, Georgia / Playfair display style) to evoke royal heritage and traditional craftsmanship.
+- **Body & Controls**: Geist Sans / System Sans (`font-sans`) for clean legibility, crisp price display, and intuitive mobile shopping.
 
-## 2. Color Palette & Design Tokens
-
-### Core Neutral Palette
-- `Background Primary`: `#06090E` (Deepest Void)
-- `Background Secondary`: `#0C111C` (Dark Obsidian Surface)
-- `Surface Card`: `rgba(18, 24, 38, 0.7)` with `backdrop-filter: blur(16px)`
-- `Surface Elevated / Hover`: `rgba(28, 38, 58, 0.5)`
-- `Border Subtle`: `rgba(255, 255, 255, 0.08)`
-- `Border Highlight`: `rgba(99, 102, 241, 0.3)`
-- `Text Primary`: `#F8FAFC` (Slate 50)
-- `Text Secondary`: `#94A3B8` (Slate 400)
-- `Text Muted`: `#64748B` (Slate 500)
-
-### Telemetry Accents
-- `Conversion Emerald`: `#10B981` (Glow: `rgba(16, 185, 129, 0.25)`)
-- `Attribution Indigo`: `#6366F1` (Glow: `rgba(99, 102, 241, 0.35)`)
-- `Signal Cyan`: `#06B6D4` (Glow: `rgba(6, 182, 212, 0.25)`)
-- `Warning Amber`: `#F59E0B`
-- `Error Rose`: `#F43F5E`
-
----
-
-## 3. Typography & Hierarchy
-- **Primary Typeface**: `Geist Sans` (`var(--font-geist-sans)`)
-- **Monospace Code/Parameter Typeface**: `Geist Mono` (`var(--font-geist-mono)`)
-- **Display Headings**:
-  - `Hero H1`: 48px–64px / Leading 1.1 / Font Weight 700 / Tight Tracking (-0.03em)
-  - `Section H2`: 32px–40px / Leading 1.2 / Font Weight 600 / Tracking (-0.02em)
-  - `Card H3`: 20px–24px / Leading 1.3 / Font Weight 600
-  - `Body Copy`: 15px–16px / Leading 1.6 / Font Weight 400
-  - `Code / Tags / Badges`: 12px–13px / Font Weight 500 / Geist Mono
-
----
-
-## 4. Spacing Scale & Grid System
-- Max Container Width: `1280px` (`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`)
-- Vertical Section Rhythm: `py-20 lg:py-28`
-- Component Gap System: `gap-6` to `gap-8` for grids; `gap-3` to `gap-4` for form clusters
-
----
-
-## 5. UI Component Specifications
-
-### 1. Buttons & CTAs
-- **Primary Action**: Gradient fill (`from-emerald-500 to-teal-600`), white text, bold, hover elevation with shadow `0 0 25px rgba(16,185,129,0.35)`.
-- **Secondary Action**: Bordered translucent (`border border-white/15 bg-white/5 hover:bg-white/10 text-slate-200`), transition duration 200ms.
-- **Micro-Copy/Copy Buttons**: Monospace pill with immediate checkmark state transition.
-
-### 2. Interactive UTM Builder
-- Real-time parameter extraction and URL concatenation.
-- Quick channel presets: Google Ads (`cpc`), Meta / Instagram (`paid_social`), LinkedIn Ads (`social_ad`), Newsletter (`email`), Twitter/X (`social`).
-- Live URL copy confirmation feedback with copy notification toast.
-- Immediate query string syntax highlighter (`?`, `&`, parameter keys, parameter values).
-
-### 3. Interactive Analytics Showcase
-- Live metric cards (Sessions, Attributed Conversions, Conversion Rate, CAC, Total Attributed Pipeline).
-- Filter controls by Date Window (Last 7 Days, Last 30 Days, Last 90 Days).
-- Channel performance breakdown bar chart with comparative percentages.
-- Real-time campaign telemetry table with status indicators and copyable tracking links.
-
-### 4. Interactive Attribution Flow Visualizer
-- 5-step diagram:
-  1. `Campaign Creation & Tagging`
-  2. `Visitor Arrival & Referrer Ingestion`
-  3. `Session Attribution Engine` (First-Touch / Last-Touch toggle)
-  4. `Conversion Event Matching`
-  5. `Revenue & ROAS Intelligence Dashboard`
-
----
-
-## 6. Accessibility & Motion Guidelines
-- Contrast ratios exceed WCAG AA standards (minimum 4.5:1 on text, 3:1 on large text and controls).
-- Focus rings are styled explicitly with `focus-visible:ring-2 focus-visible:ring-emerald-400`.
-- All CSS transitions are smooth (150ms–300ms cubic-bezier).
-- No distracting continuous bounce animations; motion is functional and user-triggered.
+## 4. Layout & Information Architecture
+1. **Announcement Bar**: Key pricing anchor ("Starting from ₹600/-") + quick address and phone.
+2. **Sticky Royal Navbar**: Glowing crown logo, category links, call button, and WhatsApp CTA.
+3. **Hero Section**: Strong brand statement, pricing callout, key trust metrics (5.0 rating, 1000+ styles, in-store alterations), and hero product showcase card.
+4. **Category Navigator**: Quick-access pill buttons for Kurtas, Jodhpuris, Nehru Jackets, Blazers, and Barat Sets.
+5. **Interactive Catalogue**: Live search filter, price filters (Under ₹1,000, ₹1,000-₹2,500, Above ₹2,500), product cards, and quick view drawer.
+6. **Value Propositions**: In-store master tailor, honest pricing from ₹600, groom squad packages, handpicked fabrics.
+7. **Social Proof & Instagram Reels**: `@mayraethnicindore` profile card and video reel previews.
+8. **Store Location & Amenities**: Full physical address, hours, parking info, and interactive embedded Google Map.
+9. **Customer Reviews**: Testimonials from real Indore patrons.
+10. **FAQ**: Transparent answers about timings, alteration turnaround, and bulk orders.
+11. **Final Conversion CTA**: Warm call to visit the showroom or message on WhatsApp.
+12. **Footer**: Complete store metadata, directions link, and social channels.
+13. **Floating WhatsApp Widget**: Persistent bottom-right shortcut with attention pulse.

@@ -1,40 +1,44 @@
-'use client';
-import React, { useState } from 'react';
-import { Sparkles, ArrowRight, X } from 'lucide-react';
+import React from "react";
+import { STORE_INFO, generateWhatsAppLink } from "@/lib/products-data";
+import { MapPin, Phone, Sparkles } from "lucide-react";
 
-export default function AnnouncementBar() {
-  const [isVisible, setIsVisible] = useState(true);
-
-  if (!isVisible) return null;
-
+export function AnnouncementBar() {
   return (
-    <div className="relative z-50 bg-gradient-to-r from-emerald-950/80 via-indigo-950/80 to-slate-900 border-b border-emerald-500/20 text-xs sm:text-sm py-2 px-4 transition-all">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex-1 flex items-center justify-center gap-2 text-center text-slate-300">
-          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 font-medium text-xs border border-emerald-500/30">
-            <Sparkles className="w-3 h-3 text-emerald-400 animate-pulse" />
-            v3.2 Update
+    <div className="bg-gradient-to-r from-amber-600 via-amber-500 to-orange-600 text-stone-950 font-medium text-xs sm:text-sm py-2 px-4 shadow-sm relative z-50">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="flex items-center gap-2 font-semibold tracking-wide text-center sm:text-left">
+          <Sparkles className="w-4 h-4 text-stone-950 animate-pulse shrink-0" />
+          <span>
+            <strong className="font-bold">Festive & Wedding Offer:</strong> Designer Kurtas & Ethnic Wear Starting at just{" "}
+            <span className="bg-stone-950 text-amber-300 px-2 py-0.5 rounded font-black text-xs">
+              {STORE_INFO.startingPrice}
+            </span>
           </span>
-          <span className="hidden sm:inline text-slate-200">
-            Multi-Touch Attribution Engine & First-Party Cookieless Telemetry are now live.
-          </span>
-          <span className="sm:hidden text-slate-200">
-            v3.2 Multi-Touch Attribution Engine live
-          </span>
+        </div>
+
+        <div className="flex items-center gap-4 text-xs">
           <a
-            href="#attribution"
-            className="inline-flex items-center gap-1 text-emerald-400 font-medium hover:text-emerald-300 transition-colors ml-1 underline underline-offset-2"
+            href={STORE_INFO.googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 hover:underline text-stone-900 font-bold transition-colors"
           >
-            Explore Flow <ArrowRight className="w-3.5 h-3.5" />
+            <MapPin className="w-3.5 h-3.5 shrink-0" />
+            <span>Mahalaxmi Nagar, Indore</span>
+          </a>
+
+          <span className="hidden md:inline text-stone-900/50">|</span>
+
+          <a
+            href={generateWhatsAppLink()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 bg-stone-950/20 hover:bg-stone-950/30 px-2.5 py-0.5 rounded-full font-bold transition-all text-stone-950"
+          >
+            <Phone className="w-3 h-3 shrink-0" />
+            <span>WhatsApp: {STORE_INFO.phone}</span>
           </a>
         </div>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-slate-400 hover:text-white p-1 rounded-md transition-colors focus:outline-none focus:ring-1 focus:ring-slate-400"
-          aria-label="Dismiss banner"
-        >
-          <X className="w-3.5 h-3.5" />
-        </button>
       </div>
     </div>
   );

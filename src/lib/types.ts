@@ -1,48 +1,33 @@
-export interface UtmParameters {
-  baseUrl: string;
-  source: string;
-  medium: string;
-  campaign: string;
-  term: string;
-  content: string;
-}
-
-export interface PresetTemplate {
+export interface Product {
   id: string;
   name: string;
-  platform: string;
-  iconName: string;
-  source: string;
-  medium: string;
-  campaignDefault: string;
+  category: "kurtas" | "jodhpuris" | "jackets" | "blazers" | "indo-western" | "accessories";
+  price: number;
+  originalPrice: number;
+  tag?: "Bestseller" | "Trending" | "Royal Pick" | "Under ₹999" | "Wedding Special";
+  fabric: string;
+  colors: string[];
+  sizes: string[];
   description: string;
+  image: string;
+  inStock: boolean;
 }
 
-export interface CampaignData {
+export interface Category {
   id: string;
   name: string;
-  source: string;
-  medium: string;
-  clicks: number;
-  conversions: number;
-  conversionRate: string;
-  spend: string;
-  revenue: string;
-  roas: string;
-  status: 'active' | 'paused' | 'scheduled';
+  slug: "all" | "kurtas" | "jodhpuris" | "jackets" | "blazers" | "indo-western" | "accessories";
+  description: string;
+  startingPrice: number;
+  iconName: string;
 }
 
-export interface ChannelMetric {
-  channel: string;
-  sessions: number;
-  percentage: number;
-  conversions: number;
-  revenue: string;
-  color: string;
-}
-
-export interface FaqItem {
-  question: string;
-  answer: string;
-  category: 'UTM Basics' | 'Attribution' | 'Privacy & Analytics';
+export interface Review {
+  id: string;
+  name: string;
+  location: string;
+  rating: number;
+  occasion: string;
+  comment: string;
+  outfit: string;
 }

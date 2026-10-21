@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,41 +13,42 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PitchWeb — Premium UTM Tracking & Multi-Touch Marketing Attribution",
-  description: "Standardize campaign URLs, track visitor touchpoints across every channel, and attribute real revenue with precision marketing telemetry.",
-  keywords: ["UTM builder", "marketing attribution", "campaign tracking", "multi-touch attribution", "analytics platform", "pitchweb"],
-  authors: [{ name: "PitchWeb Engineering" }],
+  title: "Mayra Ethnic For Men Indore | Where Royalty Meets Affordability",
+  description:
+    "Designer Kurtas, Royal Jodhpuris, Nehru Jackets, Blazers & Wedding Sherwanis in Indore. Range starts from ₹600/-. Visit our Mahalaxmi Nagar store or order on WhatsApp (+91 8253004247).",
+  keywords: [
+    "Mayra Ethnic",
+    "Mayra Ethnic For Men",
+    "Indore ethnic wear",
+    "Mahalaxmi Nagar Indore clothing store",
+    "designer kurtas Indore",
+    "Jodhpuri suit Indore",
+    "Nehru jacket Indore",
+    "wedding wear for men Indore",
+    "groomsmen outfits Indore",
+  ],
+  authors: [{ name: "Mayra Ethnic For Men" }],
   openGraph: {
-    title: "PitchWeb — Precision UTM Tracking & Attribution Platform",
-    description: "Create campaign links, enforce taxonomy, track visitor sources, and make confident marketing decisions from one unified telemetry dashboard.",
+    title: "Mayra Ethnic For Men | Where Royalty Meets Affordability",
+    description:
+      "Indore's Premier Designer Ethnic Wear For Men. Kurtas, Jodhpuris, Jackets, Blazers starting at ₹600/-. Located at Mahalaxmi Nagar, Indore.",
     type: "website",
-    locale: "en_US",
-    siteName: "PitchWeb",
+    locale: "en_IN",
+    siteName: "Mayra Ethnic Indore",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "PitchWeb — Premium UTM Tracking & Marketing Attribution",
-    description: "Standardize campaign URLs and map multi-touch visitor attribution to revenue.",
-  },
-};
-
-export const viewport: Viewport = {
-  themeColor: "#06090e",
-  colorScheme: "dark",
-  width: "device-width",
-  initialScale: 1,
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} dark scroll-smooth`}>
-      <body className="min-h-screen bg-[#06090E] text-slate-100 antialiased font-sans selection:bg-emerald-500 selection:text-black">
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col bg-[#0c0a09]">{children}</body>
     </html>
   );
 }

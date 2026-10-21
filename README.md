@@ -1,66 +1,47 @@
-# pitchweb
+# Mayra Ethnic For Men — Official Website & Showcase
 
-# PitchWeb — Precision UTM Tracking & Multi-Touch Marketing Telemetry Platform
-
-PitchWeb is a high-performance marketing attribution and UTM link management platform engineered to eliminate taxonomy errors, unify multi-touch visitor journeys, and calculate true return on ad spend (ROAS).
-
----
-
-## Key Features
-
-- **Interactive Standardized UTM Builder**: Generate RFC 3986 compliant campaign tracking links with live query syntax highlighting, parameter character counter, automatic lowercase/whitespace sanitation, and single-click clipboard copying.
-- **Pre-Configured Channel Presets**: One-click configuration for Google Ads (CPC), Meta/Instagram (Paid Social), LinkedIn (Sponsored B2B), Email Newsletters, and X/Twitter.
-- **Attribution Architecture**: First-Touch (top-of-funnel introduction) and Last-Touch (closing conversion) mathematical models with session persistence that survives multi-page navigation.
-- **Interactive Telemetry Dashboard Preview**: Timeframe toggles (7D, 30D, 90D), real-time revenue distribution breakdown bars, and searchable/filterable campaign telemetry table.
-- **Connected Ecosystem**: Native support for Google Analytics 4, Meta Conversions API (CAPI), Shopify & Stripe checkout webhooks, HubSpot CRM, and Segment.
-- **Privacy-First & Cookieless**: GDPR and CCPA compliant architecture without third-party tracking pixels or intrusive browser fingerprinting.
+> **"Where Royalty Meets Affordability 👑"**  
+> Indore's Premier Men's Designer Ethnic Wear Store — Kurtas, Royal Jodhpuris, Silk Jackets, Blazers & Wedding Sherwanis.
 
 ---
 
-## Tech Stack
-
-- **Framework**: Next.js 16.4.2 (App Router, Server Components by default)
-- **Language**: TypeScript 5+ (Strict mode)
-- **Styling**: Tailwind CSS v4, custom precision design tokens
-- **Icons**: `lucide-react`
-- **Compiler / Bundler**: Turbopack
+## 📍 Store Information
+- **Store Address**: 21 Veena Nagar, 60 Feet Road, Mahalaxmi Nagar, Indore, Madhya Pradesh - 452010
+- **Phone / WhatsApp**: [+91 8253004247](https://wa.me/918253004247)
+- **Instagram**: [@mayraethnicindore](https://www.instagram.com/mayraethnicindore/)
+- **Google Maps**: [View Location](https://maps.app.goo.gl/cY2gbo5ZhiUW7AzW7?g_st=ic)
+- **Timings**: 11:00 AM – 10:00 PM (Open All 7 Days)
+- **Pricing**: Designer Kurtas & Ethnic Wear Starting from **₹600/-**
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 ### 1. Install Dependencies
 ```bash
 npm install
 ```
 
-### 2. Start Local Development Server
+### 2. Run the Development Server
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) to view the application.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-### 3. Production Build & Linting
+### 3. Production Build
 ```bash
-# Run ESLint check
-npm run lint
-
-# Compile optimized production bundle
 npm run build
-
-# Start production server
 npm run start
 ```
 
 ---
 
-## Documentation
-
-- [`SKILL.md`](./SKILL.md): Reusable development guide, architecture standards, and parameter taxonomy.
-- [`DESIGN.md`](./DESIGN.md): Visual design specifications, color tokens, typography, and component styling.
-- [`AGENT_HANDOVER.md`](./AGENT_HANDOVER.md): Engineering handover notes, verification results, and project state.
-
----
-
-## License
-MIT &copy; 2026 PitchWeb Marketing Telemetry Inc.
+## ✨ Features
+- 👑 **Royal Design System**: Custom crown emblem logo, gold gradients, and luxury dark theme tailored to royal ethnic menswear.
+- 📱 **Interactive Catalogue**: Live search by fabric/color/name, category tabs, and price filters (Under ₹1,000, ₹1,000-₹2,500, ₹2,500+).
+- 💬 **Direct WhatsApp Ordering**: Automatically formats pre-filled WhatsApp messages with product name, price, and selected size for instant closing.
+- 🔍 **Product Quick View**: Size picker (38 to 46), color variants, and fabric composition details.
+- 📍 **Store Walk-In Locator**: Address, amenities, and embedded Google Maps for easy navigation.
+- 🎥 **Instagram Reels Integration**: Highlights from `@mayraethnicindore` showcasing customer trials and wedding collections.
+- ⭐ **Customer Reviews**: Testimonials from real Indore buyers.
+- ❓ **FAQ Accordion**: Answers about alterations, timings, and custom fittings.

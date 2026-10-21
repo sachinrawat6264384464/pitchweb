@@ -1,71 +1,82 @@
 ---
-name: utm-tracking-marketing-analytics
-description: Operating guidelines, architecture principles, and implementation standards for PitchWeb UTM tracking & marketing attribution platform.
+name: mayra-ethnic-indore-development
+description: Reusable engineering and operational guide for maintaining and scaling the Mayra Ethnic For Men digital showroom and catalogue web application.
 ---
 
-# SKILL: UTM Tracking & Marketing Analytics Engineering Guide
+# Mayra Ethnic For Men — Engineering & Operational Skill Guide
 
 ## 1. Project Identity & Purpose
-- **Product Name**: PitchWeb (PitchMetrics)
-- **Domain**: Campaign URL Generation, UTM Taxonomy Enforcement, Multi-Touch Attribution, and Traffic Analytics.
-- **Value Proposition**: "Create campaign links, track visitor sources, understand campaign performance, and make better marketing decisions from one place."
+- **Brand**: Mayra Ethnic For Men (`@mayraethnicindore`)
+- **Tagline**: *"Where Royalty Meets Affordability 👑"*
+- **Core Domain**: Men's Designer Ethnic, Festive, Groom, and Celebration Wear in Indore, Madhya Pradesh.
+- **Location**: 21 Veena Nagar, 60 Feet Road, Mahalaxmi Nagar, Indore - 452010.
+- **Primary Business Flow**: Direct WhatsApp order/inquiry conversion (`+91 8253004247`), store walk-in driving, interactive product catalogue, real-time filtering, customer quick view, and local SEO.
 
 ## 2. Technology Stack & Directory Structure
-- **Framework**: Next.js 16+ (App Router, Server & Client Components)
-- **Language**: TypeScript (Strict typing, zero `any`)
-- **Styling**: Tailwind CSS v4, Vanilla CSS design tokens
-- **Icons**: `lucide-react`
-- **State & Interactions**: React 19 Hooks (`useState`, `useMemo`, `useCallback`)
-- **Structure**:
-  ```
-  src/
-  ├── app/
-  │   ├── layout.tsx         # Root layout, fonts, SEO metadata
-  │   ├── page.tsx           # Complete landing page assembly
-  │   └── globals.css        # Color tokens, utility layers, animations
-  ├── components/
-  │   ├── Navbar.tsx         # Responsive header with desktop & mobile drawer
-  │   ├── Hero.tsx           # High-impact value proposition & quick metric teaser
-  │   ├── UtmBuilder.tsx     # Interactive link generator & parameter preset engine
-  │   ├── ProductPreview.tsx # Interactive attribution & live analytics preview
-  │   ├── ProblemSection.tsx # Attribution blind spots vs structured telemetry
-  │   ├── HowItWorks.tsx     # 4-stage data pipeline workflow
-  │   ├── Features.tsx       # Feature matrix & asymmetric capability cards
-  │   ├── AnalyticsShowcase.tsx # Deep-dive metrics, interactive channel charts & campaign table
-  │   ├── AttributionFlow.tsx# Visual data diagram (Link -> Ingestion -> Logic -> ROI)
-  │   ├── Integrations.tsx   # Verified & planned ecosystem connectors
-  │   ├── TrustPrivacy.tsx   # GDPR/CCPA, cookieless attribution, data governance
-  │   ├── Pricing.tsx        # Tiered plans with monthly/annual toggle
-  │   ├── Faq.tsx            # Expandable accordion for common questions
-  │   ├── FinalCta.tsx       # High-contrast action banner
-  │   └── Footer.tsx         # Brand footer with navigation, status & links
-  └── lib/
-      └── utm-utils.ts       # UTM parameter validation, URL sanitization & presets
-  ```
+- **Framework**: Next.js 16 (App Router with Turbopack)
+- **UI & Runtime**: React 19, TypeScript 5
+- **Styling**: Tailwind CSS v4, Vanilla CSS Custom Design Tokens (`@import "tailwindcss"`)
+- **Icons**: Lucide React (`lucide-react`) + Custom Brand SVG Components (`Icons.tsx`)
+- **Package Manager**: npm
 
-## 3. Brand Identity & Design System Rules
-- **Theme**: Dark-mode primary (Midnight Obsidian `#070A0F`, Card Surface `#0D131F`, Border `#1E293B`).
-- **Primary Accent**: Emerald / Mint (`#10B981` / `#34D399`) representing positive conversion & ROI.
-- **Secondary Accent**: Electric Indigo / Violet (`#6366F1` / `#818CF8`) representing attribution intelligence.
-- **Telemetry Accent**: Cyan (`#06B6D4`) for real-time link clicks and traffic signals.
-- **Typography**: Geist Sans for interface elements, Geist Mono for parameters, URLs, and numeric metrics.
-- **Elevation**: Subtle layered borders (`border border-white/10`) with ambient radial glows instead of harsh dropshadows.
+```
+d:\pitchweb3.0/
+├── public/                 # Static public assets and favicons
+├── src/
+│   ├── app/
+│   │   ├── favicon.ico
+│   │   ├── globals.css     # Design tokens, gradients, royal gold utilities
+│   │   ├── layout.tsx      # Root metadata, SEO keywords, typography
+│   │   └── page.tsx        # Single-page dynamic showcase with stateful tabs
+│   ├── components/
+│   │   ├── AnnouncementBar.tsx # Top promotional banner & store highlights
+│   │   ├── CategoryPills.tsx   # Interactive category selector & count badges
+│   │   ├── CustomerReviews.tsx # Local Indore customer testimonials
+│   │   ├── FaqSection.tsx      # Interactive FAQ accordion
+│   │   ├── FinalCta.tsx        # High-conversion store visit & WhatsApp CTA
+│   │   ├── FloatingWhatsApp.tsx# Sticky WhatsApp contact widget with ping badge
+│   │   ├── Footer.tsx          # Store details, hours, map link, copyright
+│   │   ├── Hero.tsx            # Royal showcase with price anchors (starts ₹600)
+│   │   ├── Icons.tsx           # Standalone SVG icons (Instagram, WhatsApp)
+│   │   ├── InstagramSection.tsx# Real reels & social proof (@mayraethnicindore)
+│   │   ├── Logo.tsx            # Royal crown geometric emblem with gold gradient
+│   │   ├── ProductCatalogue.tsx# Search, price filters, product card grid
+│   │   ├── ProductQuickView.tsx# Size picker, fabric details, WhatsApp order
+│   │   ├── StoreLocation.tsx   # Address, hours, amenities, Google Maps iframe
+│   │   └── WhyChooseUs.tsx     # 4 Core value pillars (Fitting, Price, Craft)
+│   └── lib/
+│       ├── products-data.ts    # Store details, catalogue items, WhatsApp URL generator
+│       └── types.ts            # TypeScript data models (Product, Category, Review)
+├── AGENT_HANDOVER.md       # Handover documentation for subsequent agents
+├── DESIGN.md               # Visual, typography, and UX design specification
+├── README.md               # GitHub project readme and repository documentation
+├── SKILL.md                # This operational guide
+└── package.json
+```
 
-## 4. UTM Parameter Taxonomy & Standards
-Standard UTM parameters must follow RFC 3986 encoding:
-- `utm_source`: Identifies referrer (e.g., `google`, `newsletter`, `linkedin`, `twitter`).
-- `utm_medium`: Marketing medium (e.g., `cpc`, `email`, `social`, `referral`).
-- `utm_campaign`: Individual campaign identifier (e.g., `summer_launch_2026`).
-- `utm_term`: Keyword targeting for search ads (optional).
-- `utm_content`: A/B test variation or creative ad unit identifier (optional).
+## 3. Setup & Development Commands
+- Install dependencies: `npm install`
+- Start local development server: `npm run dev`
+- Run production build: `npm run build`
+- Start production server: `npm run start`
+- Run linting: `npm run lint`
 
-## 5. UI/UX Standards & Accessibility
-- **Interactive Feedback**: Every actionable element must provide immediate visual feedback (copy confirmations, active tab highlights, hover scales).
-- **Zero Broken Links**: All navigation targets point to either internal anchor targets (`#builder`, `#features`, `#pricing`, `#analytics`) or verified destinations.
-- **Keyboard & Screen Reader Support**: Use semantic tags (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`), valid `aria-label` attributes on icon-only buttons, and explicit form labels.
-- **Mobile Recomposition**: Complex tables must provide horizontal scrolling or card transformations on screens `< 768px`.
+## 4. WhatsApp Direct Inquiry Architecture
+All product cards and modals connect to WhatsApp via `generateWhatsAppLink()` in `src/lib/products-data.ts`:
+```ts
+generateWhatsAppLink(productName?: string, price?: number, size?: string): string
+```
+- WhatsApp Number: `918253004247`
+- Formats pre-filled message with product title, price, selected size, and polite Hindi/English greeting.
+- Ensures zero friction for customers to convert from browsing to chatting with the store.
 
-## 6. Testing & Quality Verification
-- Type Check: Run `npm run build` or `npx tsc --noEmit`.
-- Lint: Run `npm run lint`.
-- Browser Testing: Verify responsive rendering from mobile (375px) through 4K displays.
+## 5. Next.js 16 Conventions & Prerender Rules
+- **No Dynamic Clock Calls during Prerender**: Do not execute unstable dynamic time checks like `new Date().getFullYear()` directly in root client components during static prerender without handling hydration or static fallbacks.
+- **Client vs Server Components**: Use `"use client"` where state (search query, category filter, modal state) is active, keeping pure presentational components lightweight.
+- **Tailwind CSS v4**: Tokens are declared in `globals.css` with `@import "tailwindcss";` and custom utility classes like `.gold-gradient-text`, `.royal-card-hover`.
+
+## 6. Extending the Catalogue
+To add new outfits or categories:
+1. Open `src/lib/products-data.ts`.
+2. Add the item to `PRODUCTS` array with `name`, `category`, `price`, `originalPrice`, `tag`, `fabric`, `colors`, `sizes`, `image`, and `inStock`.
+3. Re-run `npm run build` to verify static compilation.

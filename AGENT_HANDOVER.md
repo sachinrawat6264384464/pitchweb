@@ -1,73 +1,47 @@
-# AGENT HANDOVER: PitchWeb Marketing Analytics & UTM Tracking
+# Agent Handover — Mayra Ethnic For Men Indore Web Showcase
 
 ## 1. Project Overview & Current Objective
-PitchWeb is an enterprise-grade, privacy-first UTM campaign link management and multi-touch marketing attribution platform.
-The objective of this task was to inspect the repository, design a distinctive, precision-telemetry visual system, and build a complete 15-section, production-grade landing page with an interactive UTM link generator, live analytics showcase, and attribution architecture.
+- **Client Request**: The client runs a men's ethnic wear store in Indore named **Mayra Ethnic For Men** (`@mayraethnicindore`). The website is a premium digital showcase and shopping catalogue designed to drive customer inquiries directly to WhatsApp and increase physical walk-ins to their showroom in Mahalaxmi Nagar, Indore.
+- **Current Objective Completed**: Complete responsive Next.js 16 landing page with interactive product catalogue, search, category pills, price filters, quick view modal with size selector, WhatsApp direct ordering, Instagram reels showcase, customer reviews, store location with interactive Google Maps embed, and FAQ.
 
----
+## 2. Key Business & Contact Details
+- **Brand**: Mayra Ethnic For Men
+- **Tagline**: *"Where Royalty Meets Affordability 👑"*
+- **Phone / WhatsApp**: `+91 8253004247`
+- **Address**: `21 Veena Nagar, 60 Feet Road, Mahalaxmi Nagar, Indore, Madhya Pradesh - 452010`
+- **Google Maps**: `https://maps.app.goo.gl/cY2gbo5ZhiUW7AzW7?g_st=ic`
+- **Instagram**: `@mayraethnicindore`
+- **Starting Price**: `₹600/-`
+- **Timings**: `11:00 AM – 10:00 PM (All 7 Days Open)`
 
-## 2. Implementation Status: Complete (Production Ready)
-- **Framework**: Next.js 16.4.2 (App Router with Turbopack)
-- **Language**: TypeScript 5+ (Strict mode, zero type errors)
-- **Styling**: Tailwind CSS v4 with custom precision design tokens
-- **Icons**: `lucide-react`
-- **Build Status**: `npm run build` completed successfully (Exit Code 0)
-- **Lint Status**: `npm run lint` completed cleanly with zero errors and zero warnings (Exit Code 0)
+## 3. Technology Stack & Key Dependencies
+- Next.js: `16.4.2` (Turbopack, App Router)
+- React: `19.3.0`
+- Styling: `tailwindcss: ^4` + custom CSS tokens in `globals.css`
+- Icons: `lucide-react: ^1.61.0` + custom `Icons.tsx` for brand icons
 
----
+## 4. Implemented Features
+1. **Top Announcement Ticker**: Store hours, starting price (₹600), WhatsApp link.
+2. **Royal Header / Navbar**: Custom Crown SVG logo, desktop & mobile drawer navigation, direct call & WhatsApp buttons.
+3. **High-Impact Hero Section**: Value proposition, price anchor, trust statistics, hero showcase card.
+4. **Category Navigator**: One-click filters for Kurtas, Jodhpuris, Nehru Jackets, Blazers, and Barat Sets.
+5. **Interactive Catalogue**: Live search by name/fabric/color, price filters (Under ₹1,000, ₹1,000-₹2,500, Above ₹2,500), empty states, and product grid.
+6. **Product Quick View Modal**: High-res image, fabric details, color picker, size selector (38/S to 46/XXL), and pre-filled WhatsApp inquiry generator.
+7. **The Mayra Ethnic Promise (Why Us)**: 4 value pillars detailing tailor alterations, pricing, and fabric quality.
+8. **Instagram Showcase**: Dedicated `@mayraethnicindore` profile card and reel highlights.
+9. **Store Location & Map Section**: Full address, timings, parking/AC amenities, and embedded Google Map.
+10. **Customer Reviews**: Testimonials from real Indore patrons.
+11. **FAQ Section**: Accordion answering questions about fittings, prices, and deliveries.
+12. **Final CTA & Footer**: Closing conversion section and comprehensive footer.
+13. **Floating WhatsApp Widget**: Persistent bottom-right quick chat launcher.
 
-## 3. Implemented Landing Page Architecture (All 15 Sections)
-1. **Section 1: Announcement Bar (`src/components/AnnouncementBar.tsx`)**: Dismissible minimal announcement highlighting v3.2 multi-touch attribution engine with quick link.
-2. **Section 2: Navigation (`src/components/Navbar.tsx`)**: Fixed responsive header with PitchWeb telemetry branding, anchor navigation, quick action triggers, and mobile drawer.
-3. **Section 3: Hero (`src/components/Hero.tsx`)**: High-contrast headline, real-time edge latency pill, primary/secondary action CTAs, trust badges, and live telemetry card preview.
-4. **Section 4: Interactive UTM Builder (`src/components/UtmBuilder.tsx`)**: Live query string generation, one-click platform presets (Google Ads, Meta/Instagram, LinkedIn, Email, X), character count, real-time RFC 3986 syntax highlighting, and copy confirmation toast.
-5. **Section 4.5: Product Preview (`src/components/ProductPreview.tsx`)**: Live dashboard preview with timeframe switcher (7D, 30D, 90D), tabbed navigation, and verified campaigns table.
-6. **Section 5: The Problem (`src/components/ProblemSection.tsx`)**: 2-column comparative analysis: Fragmented Workflow (typos, casing errors, overlapping claims) vs PitchWeb Standard (taxonomic governance, deduplicated ROI).
-7. **Section 6: How It Works (`src/components/HowItWorks.tsx`)**: 4-stage pipeline (Build Standardized Link → Distribute Across Channels → Ingest Session Telemetry → Attribute Revenue & Scale).
-8. **Section 7: Core Features (`src/components/Features.tsx`)**: Asymmetric capability cards covering taxonomy enforcement, multi-touch mapping, edge telemetry, and cookieless privacy.
-9. **Section 8: Analytics Visualization (`src/components/AnalyticsShowcase.tsx`)**: Searchable, filterable campaign telemetry data table, channel progress breakdown bars, and revenue distribution.
-10. **Section 9: Attribution & Data Flow (`src/components/AttributionFlow.tsx`)**: Interactive 5-step pipeline with live First-Touch vs Last-Touch model toggle.
-11. **Section 10: Supported Ecosystem (`src/components/Integrations.tsx`)**: Verified connections (GA4, Meta CAPI, Shopify, Stripe, HubSpot, Segment, Zapier) clearly labeled by integration type.
-12. **Section 11: Trust & Privacy (`src/components/TrustPrivacy.tsx`)**: Transparent data governance, GDPR/CCPA compliance, first-party cookie isolation, and attribution limitation honesty.
-13. **Section 12: Transparent Pricing (`src/components/Pricing.tsx`)**: Starter (Free), Pro Marketer ($39/mo or $31/mo), and Scale Agency ($129/mo or $99/mo) with monthly/annual switch.
-14. **Section 13: Attribution FAQ (`src/components/Faq.tsx`)**: Interactive accordion addressing UTM parameter hygiene, Google Analytics differences, cookies, and custom domains.
-15. **Section 14: Final CTA (`src/components/FinalCta.tsx`)**: High-contrast action banner prompting immediate UTM builder launch.
-16. **Section 15: Footer (`src/components/Footer.tsx`)**: Brand details, platform navigation, live status indicator ("All Systems Operational"), and RFC 3986 compliance notice.
+## 5. Verification Results
+- **Production Build (`npm run build`)**: PASSED (Exit code 0, Turbopack, static page prerendering successful).
+- **TypeScript**: PASSED (0 errors).
 
----
-
-## 4. Repository Structure & Key Files
+## 6. How to Run Locally
+```bash
+cd d:\pitchweb3.0
+npm run dev
 ```
-pitchweb3.0/
-├── AGENTS.md                  # Next.js agent instruction guard
-├── SKILL.md                   # Operational guidelines & engineering principles
-├── DESIGN.md                  # Visual specification, color tokens, and layout system
-├── AGENT_HANDOVER.md          # Handover documentation and build state
-├── package.json               # Dependencies and build scripts
-├── tsconfig.json              # TypeScript strict configuration
-├── src/
-│   ├── app/
-│   │   ├── globals.css        # Precision telemetry dark mode & background gradients
-│   │   ├── layout.tsx         # Root layout, Geist fonts, and OpenGraph SEO metadata
-│   │   └── page.tsx           # Assembled 15-section landing page
-│   ├── components/            # 14 modular Server and Client components
-│   └── lib/
-│       ├── types.ts           # Type definitions for parameters, campaigns & metrics
-│       ├── utm-utils.ts       # URL generation, sanitization & clipboard functions
-│       └── sample-data.ts     # Channel breakdowns, presets, and demo campaigns
-```
-
----
-
-## 5. Development & Verification Commands
-- **Local Dev Server**: `npm run dev` (starts on `http://localhost:3000`)
-- **Lint Check**: `npm run lint` (0 errors, 0 warnings)
-- **Production Build**: `npm run build` (Turbopack, 100% static generation)
-- **Production Run**: `npm run start`
-
----
-
-## 6. Constraints Preserved
-- No fake external links; all navigation anchors point to internal section IDs or functional actions.
-- Server Components used wherever static rendering is viable; Client Components scoped strictly to interactive form controls and toggles.
-- Zero PII captured or exposed in URL query parameters.
+Open [http://localhost:3000](http://localhost:3000) or [http://localhost:3002](http://localhost:3002).

@@ -1,70 +1,77 @@
-import AnnouncementBar from '../components/AnnouncementBar';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import UtmBuilder from '../components/UtmBuilder';
-import ProductPreview from '../components/ProductPreview';
-import ProblemSection from '../components/ProblemSection';
-import HowItWorks from '../components/HowItWorks';
-import Features from '../components/Features';
-import AnalyticsShowcase from '../components/AnalyticsShowcase';
-import AttributionFlow from '../components/AttributionFlow';
-import Integrations from '../components/Integrations';
-import TrustPrivacy from '../components/TrustPrivacy';
-import Pricing from '../components/Pricing';
-import Faq from '../components/Faq';
-import FinalCta from '../components/FinalCta';
-import Footer from '../components/Footer';
+"use client";
+
+import React, { useState } from "react";
+import { AnnouncementBar } from "@/components/AnnouncementBar";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { CategoryPills } from "@/components/CategoryPills";
+import { ProductCatalogue } from "@/components/ProductCatalogue";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { InstagramSection } from "@/components/InstagramSection";
+import { StoreLocation } from "@/components/StoreLocation";
+import { CustomerReviews } from "@/components/CustomerReviews";
+import { FaqSection } from "@/components/FaqSection";
+import { FinalCta } from "@/components/FinalCta";
+import { Footer } from "@/components/Footer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 export default function Home() {
+  const [activeCategory, setActiveCategory] = useState<string>("all");
+
+  const handleSelectCategory = (categorySlug: string) => {
+    setActiveCategory(categorySlug);
+    // Smooth scroll down to catalogue if not already visible
+    const element = document.getElementById("collections");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <main className="min-h-screen bg-[#06090E] text-slate-100 flex flex-col selection:bg-emerald-500 selection:text-black">
-      {/* Section 1: Product Announcement Banner */}
+    <div className="min-h-screen bg-[#0c0a09] text-stone-100 flex flex-col selection:bg-amber-500 selection:text-stone-950">
+      {/* Top Banner */}
       <AnnouncementBar />
 
-      {/* Section 2: Precision Telemetry Navigation */}
+      {/* Main Navbar */}
       <Navbar />
 
-      {/* Section 3: Value Proposition & Teaser Hero */}
-      <Hero />
+      <main className="flex-1">
+        {/* Royal Hero Section */}
+        <Hero />
 
-      {/* Section 4: Interactive UTM Link Builder */}
-      <UtmBuilder />
+        {/* Category Navigation Pills */}
+        <CategoryPills
+          activeCategory={activeCategory}
+          onSelectCategory={handleSelectCategory}
+        />
 
-      {/* Section 4.5: Live Ingestion & Telemetry Dashboard Preview */}
-      <ProductPreview />
+        {/* Product Catalogue with Search & Filters */}
+        <ProductCatalogue selectedCategory={activeCategory} />
 
-      {/* Section 5: The Attribution Dilemma (Problem & Broken Workflows) */}
-      <ProblemSection />
+        {/* The Mayra Ethnic Brand Promise / Why Choose Us */}
+        <WhyChooseUs />
 
-      {/* Section 6: How It Works (4-Stage Pipeline) */}
-      <HowItWorks />
+        {/* Real Customer Moments & Instagram Reels Showcase */}
+        <InstagramSection />
 
-      {/* Section 7: Core Platform Capabilities & Feature Matrix */}
-      <Features />
+        {/* Store Location, Timings, Amenities & Embedded Map */}
+        <StoreLocation />
 
-      {/* Section 8: Interactive Analytics & Campaigns Breakdown */}
-      <AnalyticsShowcase />
+        {/* Local Indore Customer Reviews */}
+        <CustomerReviews />
 
-      {/* Section 9: Attribution Architecture & Data Flow */}
-      <AttributionFlow />
+        {/* FAQ Accordion */}
+        <FaqSection />
 
-      {/* Section 10: Connected Ecosystem & Supported Integrations */}
-      <Integrations />
+        {/* Final Call to Action */}
+        <FinalCta />
+      </main>
 
-      {/* Section 11: Trust, Privacy & Data Governance */}
-      <TrustPrivacy />
-
-      {/* Section 12: Transparent Pricing Plans */}
-      <Pricing />
-
-      {/* Section 13: Attribution FAQ */}
-      <Faq />
-
-      {/* Section 14: Final Call to Action */}
-      <FinalCta />
-
-      {/* Section 15: Precision Footer */}
+      {/* Footer */}
       <Footer />
-    </main>
+
+      {/* Sticky Floating WhatsApp Widget */}
+      <FloatingWhatsApp />
+    </div>
   );
 }
