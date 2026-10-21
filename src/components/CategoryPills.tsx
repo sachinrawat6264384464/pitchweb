@@ -39,17 +39,17 @@ export function CategoryPills({ activeCategory, onSelectCategory }: CategoryPill
                 onClick={() => onSelectCategory(cat.slug)}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all whitespace-nowrap cursor-pointer ${
                   isActive
-                    ? "bg-amber-500 text-stone-950 shadow-lg shadow-amber-500/20 font-bold scale-105"
+                    ? "bg-gradient-to-r from-orange-600 to-orange-500 text-white shadow-lg shadow-orange-600/30 font-bold scale-105 border border-orange-400/50"
                     : "bg-stone-900/80 text-stone-300 hover:text-white hover:bg-stone-800 border border-stone-800"
                 }`}
               >
-                <span className={isActive ? "text-stone-950" : "text-amber-400"}>
+                <span className={isActive ? "text-white" : "text-orange-400"}>
                   {getIcon(cat.iconName)}
                 </span>
                 <span>{cat.name}</span>
                 <span
                   className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${
-                    isActive ? "bg-stone-950/20 text-stone-950" : "bg-stone-800 text-amber-300"
+                    isActive ? "bg-black/30 text-orange-200" : "bg-stone-800 text-orange-400"
                   }`}
                 >
                   from ₹{cat.startingPrice}

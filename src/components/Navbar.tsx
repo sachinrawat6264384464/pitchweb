@@ -67,9 +67,9 @@ export function Navbar() {
               href={generateWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-stone-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 rounded-lg shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30 transition-all hover:scale-105"
+              className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-orange-600 via-orange-500 to-amber-600 hover:from-orange-500 hover:to-orange-600 rounded-lg shadow-lg shadow-orange-600/30 transition-all hover:scale-105"
             >
-              <MessageCircle className="w-4 h-4 fill-stone-950 text-amber-400" />
+              <MessageCircle className="w-4 h-4 fill-white" />
               <span>WhatsApp Order</span>
             </a>
           </div>
@@ -165,10 +165,10 @@ export function Navbar() {
               href={generateWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full py-3 text-sm font-bold text-stone-950 bg-gradient-to-r from-amber-400 to-amber-600 rounded-lg shadow-md"
+              className="flex items-center justify-center gap-2 w-full py-3 text-sm font-bold text-white bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-500 hover:to-orange-600 rounded-lg shadow-md shadow-orange-600/30"
             >
-              <MessageCircle className="w-4 h-4 fill-stone-950" />
-              <span>Inquire & Order on WhatsApp</span>
+              <MessageCircle className="w-4 h-4 fill-white" />
+              <span>Inquire &amp; Order on WhatsApp</span>
             </a>
 
             <a

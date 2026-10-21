@@ -50,12 +50,12 @@ export function ProductCatalogue({ selectedCategory }: ProductCatalogueProps) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-950/60 border border-orange-500/30 text-orange-400 text-xs font-bold uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Mahalaxmi Nagar Indore Store Catalogue</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-white">
-            Royal Ethnic Wear <span className="gold-gradient-text">Collection</span>
+            Royal Ethnic Wear <span className="orange-gradient-text">Collection</span>
           </h2>
           <p className="text-stone-400 text-sm sm:text-base">
             Handcrafted Chikankari Kurtas, Royal Jodhpuri Suits, Velvet Nehru Jackets &amp; Party Blazers. Order directly on WhatsApp or visit our Indore store.
@@ -73,7 +73,7 @@ export function ProductCatalogue({ selectedCategory }: ProductCatalogueProps) {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search Kurta, Jodhpuri, Silk, Velvet..."
-              className="w-full pl-10 pr-4 py-2.5 bg-stone-900/90 border border-stone-800 rounded-xl text-xs sm:text-sm text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 transition-colors"
+              className="w-full pl-10 pr-4 py-2.5 bg-stone-900/90 border border-stone-800 rounded-xl text-xs sm:text-sm text-white placeholder-stone-500 focus:outline-none focus:border-orange-500 transition-colors"
             />
             {searchQuery && (
               <button
@@ -88,7 +88,7 @@ export function ProductCatalogue({ selectedCategory }: ProductCatalogueProps) {
           {/* Price Range Filter Pills */}
           <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
             <span className="text-xs text-stone-400 flex items-center gap-1 mr-1">
-              <SlidersHorizontal className="w-3.5 h-3.5 text-amber-400" />
+              <SlidersHorizontal className="w-3.5 h-3.5 text-orange-400" />
               <span>Filter:</span>
             </span>
 
@@ -101,9 +101,9 @@ export function ProductCatalogue({ selectedCategory }: ProductCatalogueProps) {
               <button
                 key={filter.id}
                 onClick={() => setPriceFilter(filter.id)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                   priceFilter === filter.id
-                    ? "bg-amber-500/20 text-amber-300 border border-amber-500/60 font-bold"
+                    ? "bg-orange-950/80 text-orange-400 border border-orange-500/60 font-bold"
                     : "bg-stone-900 text-stone-400 border border-stone-800 hover:text-white"
                 }`}
               >
@@ -114,7 +114,7 @@ export function ProductCatalogue({ selectedCategory }: ProductCatalogueProps) {
 
           {/* Results Count */}
           <div className="text-xs font-semibold text-stone-400 hidden lg:block whitespace-nowrap">
-            Showing <span className="text-amber-400 font-bold">{filteredProducts.length}</span> styles
+            Showing <span className="text-orange-400 font-bold">{filteredProducts.length}</span> styles
           </div>
 
         </div>
@@ -145,13 +145,13 @@ export function ProductCatalogue({ selectedCategory }: ProductCatalogueProps) {
 
                     {/* Tag badge */}
                     {product.tag && (
-                      <div className="absolute top-3 left-3 bg-gradient-to-r from-amber-500 to-amber-600 text-stone-950 font-black text-[11px] uppercase tracking-wider px-2.5 py-0.5 rounded-md shadow-md">
+                      <div className="absolute top-3 left-3 bg-gradient-to-r from-orange-600 to-orange-500 text-white font-black text-[11px] uppercase tracking-wider px-2.5 py-0.5 rounded-md shadow-md">
                         {product.tag}
                       </div>
                     )}
 
                     {/* Discount badge */}
-                    <div className="absolute top-3 right-3 bg-stone-950/80 backdrop-blur-md border border-stone-800 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded-md">
+                    <div className="absolute top-3 right-3 bg-stone-950/80 backdrop-blur-md border border-stone-800 text-orange-400 text-[10px] font-bold px-2 py-0.5 rounded-md">
                       {discountPercent}% OFF
                     </div>
 
@@ -161,7 +161,7 @@ export function ProductCatalogue({ selectedCategory }: ProductCatalogueProps) {
                         e.stopPropagation();
                         setQuickViewProduct(product);
                       }}
-                      className="absolute bottom-3 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-stone-950/90 hover:bg-stone-900 border border-amber-500/40 text-amber-300 px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-xl whitespace-nowrap"
+                      className="absolute bottom-3 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity bg-stone-950/90 hover:bg-stone-900 border border-orange-500/50 text-orange-400 px-4 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 shadow-xl whitespace-nowrap"
                     >
                       <Eye className="w-3.5 h-3.5" />
                       <span>Quick View &amp; Sizes</span>
@@ -171,12 +171,12 @@ export function ProductCatalogue({ selectedCategory }: ProductCatalogueProps) {
                   {/* Product Details */}
                   <div className="p-4 space-y-3 flex-1 flex flex-col justify-between">
                     <div>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400/80 block">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-orange-400 block">
                         {product.category}
                       </span>
                       <h3
                         onClick={() => setQuickViewProduct(product)}
-                        className="font-serif font-bold text-white text-base hover:text-amber-300 cursor-pointer transition-colors line-clamp-1 mt-0.5"
+                        className="font-serif font-bold text-white text-base hover:text-orange-400 cursor-pointer transition-colors line-clamp-1 mt-0.5"
                       >
                         {product.name}
                       </h3>
@@ -189,7 +189,7 @@ export function ProductCatalogue({ selectedCategory }: ProductCatalogueProps) {
                     <div className="pt-3 border-t border-stone-800/80 space-y-2.5">
                       <div className="flex items-baseline justify-between">
                         <div className="flex items-baseline gap-2">
-                          <span className="text-lg font-black text-amber-400">
+                          <span className="text-lg font-black text-orange-500">
                             ₹{product.price.toLocaleString("en-IN")}
                           </span>
                           <span className="text-xs text-stone-500 line-through">
@@ -204,7 +204,7 @@ export function ProductCatalogue({ selectedCategory }: ProductCatalogueProps) {
                       <div className="flex items-center gap-2">
                         <button
                           onClick={() => setQuickViewProduct(product)}
-                          className="flex-1 py-2 px-2 rounded-lg bg-stone-900 hover:bg-stone-800 text-stone-300 border border-stone-800 text-xs font-semibold flex items-center justify-center gap-1 transition-colors"
+                          className="flex-1 py-2 px-2 rounded-lg bg-stone-900 hover:bg-stone-800 text-stone-300 border border-stone-800 hover:border-orange-500/40 text-xs font-semibold flex items-center justify-center gap-1 transition-colors"
                         >
                           <Eye className="w-3.5 h-3.5 text-stone-400" />
                           <span>Details</span>

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { CategoryPills } from "@/components/CategoryPills";
@@ -28,10 +27,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0c0a09] text-stone-100 flex flex-col selection:bg-amber-500 selection:text-stone-950">
-      {/* Top Banner */}
-      <AnnouncementBar />
-
+    <div className="min-h-screen bg-[#0c0a09] text-stone-100 flex flex-col selection:bg-orange-600 selection:text-white">
       {/* Main Navbar */}
       <Navbar />
 

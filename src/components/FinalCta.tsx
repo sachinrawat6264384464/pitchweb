@@ -10,17 +10,17 @@ export function FinalCta() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="bg-gradient-to-br from-[#1a1510] to-[#120f0c] border border-amber-500/40 rounded-3xl p-8 sm:p-12 text-center shadow-2xl relative overflow-hidden">
           
-          <div className="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mx-auto mb-6 text-amber-400">
+          <div className="w-14 h-14 rounded-2xl bg-orange-950/60 border border-orange-500/30 flex items-center justify-center mx-auto mb-6 text-orange-400">
             <Crown className="w-8 h-8" />
           </div>
 
-          <span className="text-xs uppercase font-extrabold tracking-widest text-amber-400/90 block mb-2">
+          <span className="text-xs uppercase font-extrabold tracking-widest text-orange-400 block mb-2">
             Where Royalty Meets Affordability
           </span>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-white leading-tight max-w-2xl mx-auto mb-4">
             Dress Like a King for Your <br className="hidden sm:inline" />
-            <span className="gold-gradient-text">Next Big Celebration</span>
+            <span className="orange-gradient-text">Next Big Celebration</span>
           </h2>
 
           <p className="text-stone-300 text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed">
@@ -32,9 +32,9 @@ export function FinalCta() {
               href={generateWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-bold text-stone-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 shadow-xl shadow-amber-500/30 transition-all hover:scale-105 text-sm"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-orange-600 via-orange-500 to-amber-600 hover:from-orange-500 hover:to-orange-600 shadow-xl shadow-orange-600/30 transition-all hover:scale-105 text-sm"
             >
-              <MessageCircle className="w-5 h-5 fill-stone-950" />
+              <MessageCircle className="w-5 h-5 fill-white" />
               <span>Inquire on WhatsApp</span>
             </a>
 
