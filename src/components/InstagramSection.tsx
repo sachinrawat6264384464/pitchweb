@@ -40,27 +40,27 @@ export function InstagramSection() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#0c0a09] relative">
+    <section className="py-16 sm:py-24 bg-transparent border-t border-stone-200/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Instagram Header with Profile Card */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-12 border-b border-stone-800">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-12 border-b border-stone-200">
           <div className="flex items-center gap-4 text-center md:text-left">
             <div className="w-16 h-16 rounded-full p-[2px] bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 shrink-0">
-              <div className="w-full h-full rounded-full bg-stone-950 flex items-center justify-center">
+              <div className="w-full h-full rounded-full bg-stone-900 flex items-center justify-center">
                 <InstagramIcon className="w-8 h-8 text-amber-400" />
               </div>
             </div>
             <div>
               <div className="flex items-center gap-2 justify-center md:justify-start">
-                <h3 className="text-xl sm:text-2xl font-serif font-black text-white">
+                <h3 className="text-xl sm:text-2xl font-serif font-black text-stone-900">
                   @{STORE_INFO.instagram}
                 </h3>
-                <span className="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded-full font-bold">
+                <span className="text-[10px] bg-orange-100 text-orange-700 border border-orange-200 px-2 py-0.5 rounded-full font-bold">
                   Official
                 </span>
               </div>
-              <p className="text-xs sm:text-sm text-stone-400">
+              <p className="text-xs sm:text-sm text-stone-600">
                 114+ Reels &amp; Posts • 1,300+ Indore Followers • Where Royalty Meets Affordability
               </p>
             </div>
@@ -70,7 +70,7 @@ export function InstagramSection() {
             href={STORE_INFO.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-rose-600 via-pink-600 to-amber-600 text-white font-bold text-xs sm:text-sm shadow-xl shadow-pink-600/20 hover:scale-105 transition-all"
+            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-rose-600 via-pink-600 to-amber-600 text-white font-bold text-xs sm:text-sm shadow-lg shadow-pink-600/20 hover:scale-105 transition-all"
           >
             <InstagramIcon className="w-4 h-4" />
             <span>Follow on Instagram</span>
@@ -86,7 +86,7 @@ export function InstagramSection() {
               href={STORE_INFO.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative h-96 rounded-2xl overflow-hidden bg-stone-900 border border-stone-800 hover:border-amber-500/50 transition-all duration-300 block shadow-lg"
+              className="group relative h-96 rounded-2xl overflow-hidden bg-stone-900 border border-stone-200 hover:border-orange-500/50 transition-all duration-300 block shadow-md hover:shadow-xl"
             >
               <img
                 src={reel.image}

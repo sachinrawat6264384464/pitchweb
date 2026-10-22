@@ -77,7 +77,7 @@ export const PRODUCTS: Product[] = [
     colors: ["Ivory White", "Sky Blue", "Pista Green", "Pastel Peach"],
     sizes: ["38 (S)", "40 (M)", "42 (L)", "44 (XL)", "46 (XXL)"],
     description: "Intricate tone-on-tone chikankari embroidery featuring delicate thread work on the chest and sleeves. Perfect for Haldi, Mehendi, and Puja ceremonies.",
-    image: "https://images.unsplash.com/photo-1597983073493-88cd35cf93b0?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?auto=format&fit=crop&w=800&q=80",
     inStock: true,
   },
   {
@@ -91,7 +91,7 @@ export const PRODUCTS: Product[] = [
     colors: ["Midnight Blue", "Jet Black", "Wine Crimson", "Emerald Green"],
     sizes: ["38 (S)", "40 (M)", "42 (L)", "44 (XL)"],
     description: "Signature structured imperial collar with antique brass lion-crested buttons and tailored side cuts. Designed for grooms and close family receptions.",
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+    image: "/images/hero-royal.jpg",
     inStock: true,
   },
   {
@@ -105,7 +105,7 @@ export const PRODUCTS: Product[] = [
     colors: ["Mustard Gold", "Blush Pink", "Royal Teal", "Maroon"],
     sizes: ["38 (S)", "40 (M)", "42 (L)", "44 (XL)", "46 (XXL)"],
     description: "Regal floral golden weave jacket that pairs effortlessly over plain kurtas. Features a Mandarin collar, flap pockets, and hand-finished button loops.",
-    image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80",
     inStock: true,
   },
   {
@@ -119,7 +119,7 @@ export const PRODUCTS: Product[] = [
     colors: ["Haldi Yellow", "Coral Orange", "Mint Green", "Lilac"],
     sizes: ["38 (S)", "40 (M)", "42 (L)", "44 (XL)"],
     description: "Sparkling mirror-work placket and collar that catches festive lights brilliantly during Sangeet and Garba nights. Comes with matching comfortable churidar.",
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
     inStock: true,
   },
   {

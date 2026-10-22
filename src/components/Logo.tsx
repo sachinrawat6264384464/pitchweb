@@ -3,9 +3,10 @@ import React from "react";
 interface LogoProps {
   size?: "sm" | "md" | "lg";
   showTagline?: boolean;
+  lightMode?: boolean;
 }
 
-export function Logo({ size = "md", showTagline = true }: LogoProps) {
+export function Logo({ size = "md", showTagline = true, lightMode = false }: LogoProps) {
   const iconSize = size === "sm" ? 34 : size === "lg" ? 56 : 44;
 
   return (
@@ -59,17 +60,25 @@ export function Logo({ size = "md", showTagline = true }: LogoProps) {
       {/* Brand Text */}
       <div className="flex flex-col">
         <span
-          className={`font-black tracking-wider uppercase text-white font-serif leading-none ${
-            size === "sm" ? "text-base" : size === "lg" ? "text-2xl" : "text-lg"
-          }`}
+          className={`font-black tracking-wider uppercase font-serif leading-none ${
+            lightMode ? "text-stone-900" : "text-white"
+          } ${size === "sm" ? "text-base" : size === "lg" ? "text-2xl" : "text-lg"}`}
         >
           Mayra <span className="gold-gradient-text font-sans font-extrabold tracking-widest text-[0.85em]">Ethnic</span>
         </span>
-        <span className="text-[10px] uppercase tracking-[0.25em] text-amber-400/90 font-medium mt-0.5">
+        <span
+          className={`text-[10px] uppercase tracking-[0.25em] font-semibold mt-0.5 ${
+            lightMode ? "text-orange-600" : "text-amber-400/90"
+          }`}
+        >
           For Men • Indore
         </span>
         {showTagline && size === "lg" && (
-          <span className="text-xs text-stone-400 italic mt-1">
+          <span
+            className={`text-xs italic mt-1 ${
+              lightMode ? "text-stone-500" : "text-stone-400"
+            }`}
+          >
             Where Royalty Meets Affordability 👑
           </span>
         )}
